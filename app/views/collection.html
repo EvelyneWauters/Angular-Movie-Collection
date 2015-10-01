@@ -1,24 +1,20 @@
 
+<div style="padding-top: 4rem">
+<section ng-show="data">
+
+    <div class="row">
+
+        <div class="col-md-4 movie"
+             ng-repeat="movie in data | orderBy:'-id'" >
+
+            <img src="{{movie.thumbImage}}"/>
+            <p>
+                {{movie.title}}
+            </p>
+
+        </div>
+    </div>
 
 
-<div>
-<table class="table table-bordered table-hover">
-    <thead>
-    </thead>
-
-    <tbody>
-
-    <tr ng-repeat="movie in data ">
-
-        <td>
-            <img src="{{movie.thumbImage}}" alt="thumbnail" style="width:150px;">
-            <p>{{movie.title}}</p>
-        </td>
-
-
-    </tr>
-
-    </tbody>
-
-</table>
+</section>
 </div>

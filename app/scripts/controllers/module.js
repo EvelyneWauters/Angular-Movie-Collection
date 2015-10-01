@@ -17,7 +17,8 @@
             });
 
             $routeProvider.when('/collection', {
-                templateUrl: 'views/collection.html'
+                templateUrl: 'views/collection.html',
+                controller: 'collectionCtrl'
             });
 
 

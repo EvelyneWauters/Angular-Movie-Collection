@@ -3,7 +3,7 @@
     <form class="form-horizontal" name="searchForm" novalidate ng-submit="searchMovie(title)">
         <div class="form-group">
 
-            <label class="col-md-2 control-label">
+            <label class="col-md-2">
             <p>{{message}}</p>
             </label>
 
@@ -14,7 +14,7 @@
         </div>
 
         <div class="form-group">
-            <div class="col-md-10 col-md-offset-2">
+            <div class="col-md-12">
                 <button type="submit" class="btn btn-success btn-block">
                     Search
                 </button>
@@ -23,27 +23,27 @@
     </form>
 </section>
 
-<!--van zodra er resultaten zijn, toon ze (=van zodra 'results' bestaat)-->
+
+
 
 <section ng-show="results">
     <h2>Search Results</h2>
 
     <div class="row">
-
-        <div class="col-md-4 movie" ng-click="selectMovie(movie.id)"
-             ng-repeat="movie in results" ng-class="{selected: selectedId == movie.id}">
-
+        <div class="col-md-4" ng-click="selectMovie(movie.id)" ng-repeat="movie in results">
             <img src="{{movie.posterPath}}"/>
             <p>
-                {{movie.title}}
+                <!--{{movie.title}}-->
+
+                <button class="btn btn-primary" ng-click="addMovie(movie.id)">
+                    Add to collection!
+                </button>
+
             </p>
 
         </div>
     </div>
 
-    <div class="row" ng-show="selectedId">
-        <button class="btn btn-block btn-primary" ng-click="addMovie(selectedId)">
-            Add to collection!
-        </button>
-    </div>
+
+
 </section>

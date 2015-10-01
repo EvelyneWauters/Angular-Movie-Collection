@@ -4,12 +4,7 @@
 
 
     function AppCtrl($scope, appTitle, $http)  {
-        $scope.title = appTitle;                //deze var is nu op de scope aanwezig onder de naam 'title'
-
-
-        $http.get("https://angularbackend.azurewebsites.net:443/api/Movies").success(function(data) {
-            $scope.data = data;
-        });
+        $scope.appTitle = appTitle;                //deze var is nu op de scope aanwezig onder de naam 'title'
 
     }
 
