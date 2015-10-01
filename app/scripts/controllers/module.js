@@ -21,6 +21,11 @@
                 controller: 'collectionCtrl'
             });
 
+            $routeProvider.when('/detail/id', {
+                templateUrl: 'views/detail.html',
+                controller: 'detailCtrl'
+            })
+
 
             $routeProvider.otherwise( {
                 redirectTo: '/'

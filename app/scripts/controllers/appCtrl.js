@@ -6,6 +6,17 @@
     function AppCtrl($scope, appTitle, $http)  {
         $scope.appTitle = appTitle;                //deze var is nu op de scope aanwezig onder de naam 'title'
 
+
+
+        $scope.goto = function() {
+            $location.path('/search');
+        }
+
+        //$scope.goto = function(movieId) {
+        //    $location.path('/detail/' + movieId);
+        //}
+
+
     }
 
 

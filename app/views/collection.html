@@ -8,12 +8,20 @@
              ng-repeat="movie in data | orderBy:'-id'" >
 
             <img src="{{movie.thumbImage}}"/>
-            <p>
-                {{movie.title}}
+            <!--<p><a href="#/detail">-->
+                <!--{{movie.title}}-->
+            <!--</a>-->
+            <!--</p>-->
+
+            <p><button ng-click="appCtrl.goto()">{{movie.title}}</button>
             </p>
+
+            <!--<div ng-view></div>-->
+
 
         </div>
     </div>
+
 
 
 </section>
